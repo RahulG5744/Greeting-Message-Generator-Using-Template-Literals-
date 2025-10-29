@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Greeting Message Generator</title>
+</head>
+<body>
+  <h2>Greeting Message Generator</h2>
+  <input type="text" id="name" placeholder="Enter your name">
+  <input type="text" id="time" placeholder="Enter time of day (morning, afternoon, evening)">
+  <button onclick="generateGreeting()">Generate Greeting</button>
+  <p id="result"></p>
+
+  <script>
+    function generateGreeting() {
+      const name = document.getElementById("name").value;
+      const time = document.getElementById("time").value;
+      
+      const message = `Good ${time}, ${name}! 👋 Have a great day ahead.`;
+      document.getElementById("result").innerText = message;
+    }
+  </script>
+</body>
+</html>
